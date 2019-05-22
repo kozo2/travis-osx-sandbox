@@ -10,5 +10,5 @@ before_install:
   - git clone git://github.com/ecell/ecell4-base && cd ecell4-base
   - git submodule init && git submodule update
   - conda install -y boost gsl hdf5 cmake
-  - export DYLD_LIBRARY_PATH="$HOME/miniconda/lib:$DYLD_LIBRARY_PATH"
+#  - export DYLD_LIBRARY_PATH="$HOME/miniconda/lib:$DYLD_LIBRARY_PATH"
   - $HOME/miniconda/bin/python setup.py bdist_wheel
