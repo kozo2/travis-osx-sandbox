@@ -6,6 +6,7 @@ before_install:
   - export PATH="$HOME/miniconda/bin:$PATH"
   - export LD_LIBRARY_PATH="$HOME/miniconda/lib:$LD_LIBRARY_PATH"
   - export LIBRARY_PATH="$HOME/miniconda/lib:$LIBRARY_PATH"
+  - export DYLD_LIBRARY_PATH="$HOME/miniconda/lib:$DYLD_LIBRARY_PATH"
   - which conda
   - git clone git://github.com/ecell/ecell4-base && cd ecell4-base
   - git submodule init && git submodule update
