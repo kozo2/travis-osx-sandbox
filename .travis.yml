@@ -3,8 +3,9 @@ os: osx
 before_install: 
   - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
   - bash Miniconda3-latest-MacOSX-x86_64.sh -b -p $HOME/miniconda
-  - $HOME/miniconda/bin/conda --version
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - which conda
   - git clone git://github.com/ecell/ecell4-base && cd ecell4-base
   - git submodule init && git submodule update
-  - $HOME/miniconda/bin/conda install -y boost gsl hdf5
+  - conda install -y boost gsl hdf5 cmake
   - $HOME/miniconda/bin/python setup.py bdist_wheel
